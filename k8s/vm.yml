@@ -24,6 +24,7 @@ spec:
         vm.kubevirt.io/flavor: small
         vm.kubevirt.io/os: fedora
         vm.kubevirt.io/workload: server
+        vm.kubevirt.io/name: vm-app
         sidecar.istio.io/inject: "true"
       labels:
         kubevirt.io/domain: vm-app

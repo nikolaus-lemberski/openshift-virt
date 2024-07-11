@@ -16,7 +16,7 @@ async def app(scope, receive, send):
 
     response_headers = [(b"content-type", b"text/plain; charset=utf-8")]
     await send({"type": "http.response.start", "status": status, "headers": response_headers})
-    await send({"type": "http.response.body", "body": text.encode("UTF-8")})
+    await send({"type": "http.response.body", "body": f"{text.encode("UTF-8")}\n"})
 
 
 if __name__ == "__main__":
